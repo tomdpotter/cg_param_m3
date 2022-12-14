@@ -584,7 +584,7 @@ def mapping(mol,ring_atoms,matched_maps,n_iter):
             if len(frag) == 1:
                 mapped.append([frag[0]])
                 continue
-            frag_smi = Chem.rdmolfiles.MolFragmentToSmiles(mol,frag)
+            frag_smi = Chem.rdmolfiles.MolFragmentToSmiles(mol,frag,canonical=False) # Canonical=False. Required so that fragment adjacency matrix matches inital adjacency matrix (i.e. layout of branches consistant).
             frag_mol = Chem.MolFromSmiles(frag_smi)
             A_frag = np.asarray(Chem.GetAdjacencyMatrix(frag_mol))
             w_frag = [atom.GetMass() for atom in frag_mol.GetAtoms()]
