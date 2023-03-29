@@ -1,4 +1,7 @@
 # cg_param_m3
+
+Please note, future development of this code will be at: https://github.com/cgkmw-durham/cg_param_m3
+
 Coarse-grained mapping and parametrisation for organic molecules and surfactants, for the Martini 3 forcefield. The script takes a SMILES code as input, and outputs files for the Gromacs simulation code (.gro and .itp). The script can be run from the Linux command-line using: 
 
 ~~~~
